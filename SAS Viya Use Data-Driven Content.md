@@ -22,6 +22,20 @@ or
 $ vim /etc/nginx/conf.d/default.conf
 ```
 
+default.conf 內容
+
+```
+server {
+  listen 8000;
+  server_name 192.168.171.248;
+
+  location / {
+    root /usr/src/sas_html;
+    allow all;
+  }
+}
+```
+
 but, nginx.conf 需要指派 default.conf 位置(預設)
 
 將存放 html 網頁的資料夾放置於 `/usr/src/sas_html`，即可指派 html
